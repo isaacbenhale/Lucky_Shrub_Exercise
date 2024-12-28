@@ -1,0 +1,184 @@
+/* Style global */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.logo img{
+    height:80px;
+    width:auto;
+    display: block;
+    }
+
+header {
+    display: flex;
+    flex-direction: column; /* Aligne les éléments verticalement */
+    align-items: center;    /* Centre le contenu horizontalement */
+    padding: 15px 30px;
+    /*background-color:rgb(195, 211, 248);*/
+    color: rgb(190, 179, 179);
+    }
+
+    /* Navigation */
+
+nav {
+        background-color: #dce4ec; /* Couleur de fond du menu */
+        padding: 10px 20px;
+    }
+
+.nav-links {
+        
+    list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center; /* Centrer les éléments */
+        gap: 15px; /* Espacement entre les liens */
+}
+
+nav .nav-links li {
+   /* display: inline;*/
+   margin: 0;
+}
+
+nav .nav-links a {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #007BFF; /* Couleur du texte */
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    border: 2px solid #007BFF; /* Contour bleu */
+    border-radius: 8px; /* Coins arrondis */
+    background-color: transparent; /* Fond transparent par défaut */
+    transition: all 0.3s ease; /* Transition pour un effet fluide */
+}
+
+nav .nav-links a:hover {
+    background-color: #0056b3; /* Fond rempli */
+    color: white; /* Texte blanc */
+    border-color: #0056b3; /* Adapter le contour à la couleur de fond */
+}
+
+/* Bannière avec Flexbox */
+.banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFD700; /* Couleur or pour attirer l'attention */
+    padding: 20px;
+    text-align: center;
+    color: #333;
+}
+
+.banner h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+.banner p {
+    margin: 10px 0 0;
+    font-size: 1.2rem;
+}
+
+/* Articles en Flexbox */
+.articles-flex {
+    display: flex;
+    justify-content: center;
+    align-items: stretch; /* Uniformiser la hauteur des articles */
+    gap: 20px; /* Espacement entre les articles */
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto; /* Centrer la section */
+}
+
+.articles-flex article {
+    background-color: white;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+    flex: 1; /* Taille flexible pour chaque article */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.articles-flex article:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.articles-flex img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+.articles-flex h2 {
+    margin: 10px 0;
+    font-size: 1.5rem;
+    color: #007BFF;
+}
+
+.articles-flex p {
+    color: #666;
+    font-size: 1rem;
+}
+
+/* Images des articles comme icônes */
+.articles-flex img {
+    width: 80px; /* Largeur de l'icône */
+    height: 80px; /* Hauteur de l'icône */
+    object-fit: cover; /* Ajuste l'image sans la déformer */
+    border-radius: 50%; /* Donne une forme circulaire */
+    margin: 0 auto 10px; /* Centre l'image et ajoute un espace en bas */
+    display: block; /* Permet de centrer avec margin auto */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .articles-flex {
+        flex-direction: column; /* Stacker les articles verticalement */
+    }
+
+    .articles-flex img {
+        width: 60px; /* Réduction pour les petits écrans */
+        height: 60px;
+    }
+
+    footer {
+        flex-direction: column; /* Passe les zones en colonnes */
+        text-align: center; /* Centre les textes et éléments */
+    }
+
+    .footer-zone {
+        margin-bottom: 10px; /* Ajoute de l'espace entre les zones */
+    }
+
+    .footer-right {
+        margin-bottom: 0; /* Supprime l'espace inutile pour le dernier élément */
+    }
+}
+
+footer {
+    display: flex; /* Structure le footer en deux zones */
+    justify-content: space-between; /* Espacement égal entre les zones */
+    align-items: center; /* Aligne verticalement les contenus */
+    background-color: #007BFF; /* Couleur de fond */
+    color: white; /* Couleur du texte */
+    padding: 20px 40px; /* Espacement interne */
+    max-width: 1200px; /* Largeur maximale du footer */
+    margin: 0 auto; /* Centrage horizontal */
+}
+
+/* Zone de gauche (logo) */
+.footer-left img {
+    height: 50px; /* Taille contrôlée du logo */
+    width: auto; /* Conserve les proportions */
+}
+
+/* Zone de droite (copyright) */
+.footer-right {
+    text-align: right; /* Aligne le texte à droite */
+    font-size: 0.9rem; /* Réduit légèrement la taille du texte */
+}
